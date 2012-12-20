@@ -1,0 +1,17 @@
+attribute	vec4 klpos, klcol, klcolRate;
+attribute	vec2 kluv;
+
+uniform		mat4 matproj;
+
+varying		vec4 klrgba, klrgbaRate;
+varying		vec2 kltex;
+
+void main(){
+	
+	gl_Position = matproj*klpos;
+
+	kltex		= kluv.st/65535.0;
+	klrgba		= klcol.rgba/255.0;
+	klrgbaRate	= klcolRate.rgba/255.0;
+	
+}
