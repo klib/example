@@ -155,6 +155,7 @@
 			unsigned texture2d:1;
 			unsigned use_colorary:1;
 			unsigned use_vertexary:1;
+			unsigned forceReflesh:1;
 			
 		}KLGLFlags;
 		

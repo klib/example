@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72218A2216857EEC00047E05 /* mori640x480.png in Resources */ = {isa = PBXBuildFile; fileRef = 72218A2116857EEC00047E05 /* mori640x480.png */; };
+		72218A271685969200047E05 /* MapChipExample.c in Sources */ = {isa = PBXBuildFile; fileRef = 72218A2416858AEE00047E05 /* MapChipExample.c */; };
 		722D2AC816807BE2001F9465 /* PrimitiveExample.c in Sources */ = {isa = PBXBuildFile; fileRef = 722D2AC616807BE2001F9465 /* PrimitiveExample.c */; };
 		722D2AD01680C729001F9465 /* SpriteExample.c in Sources */ = {isa = PBXBuildFile; fileRef = 722D2ACD1680C64A001F9465 /* SpriteExample.c */; };
 		722D2ADD16817FED001F9465 /* FontAndLabelExample.c in Sources */ = {isa = PBXBuildFile; fileRef = 722D2ADB16817F19001F9465 /* FontAndLabelExample.c */; };
@@ -87,6 +89,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72218A2116857EEC00047E05 /* mori640x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mori640x480.png; sourceTree = "<group>"; };
+		72218A2416858AEE00047E05 /* MapChipExample.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MapChipExample.c; sourceTree = "<group>"; };
+		72218A2516858AEE00047E05 /* MapChipExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapChipExample.h; sourceTree = "<group>"; };
 		722D2AC616807BE2001F9465 /* PrimitiveExample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PrimitiveExample.c; sourceTree = "<group>"; };
 		722D2AC716807BE2001F9465 /* PrimitiveExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimitiveExample.h; sourceTree = "<group>"; };
 		722D2ACD1680C64A001F9465 /* SpriteExample.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SpriteExample.c; sourceTree = "<group>"; };
@@ -254,6 +259,8 @@
 				722D2AC716807BE2001F9465 /* PrimitiveExample.h */,
 				722D2ACD1680C64A001F9465 /* SpriteExample.c */,
 				722D2ACE1680C64A001F9465 /* SpriteExample.h */,
+				72218A2416858AEE00047E05 /* MapChipExample.c */,
+				72218A2516858AEE00047E05 /* MapChipExample.h */,
 				722D2ADB16817F19001F9465 /* FontAndLabelExample.c */,
 				722D2ADC16817F19001F9465 /* FontAndLabelExample.h */,
 				722D2AF41681BFE9001F9465 /* SoundExample.c */,
@@ -280,6 +287,7 @@
 		722D2AE41681A3BE001F9465 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				72218A2116857EEC00047E05 /* mori640x480.png */,
 				722D2AE51681A3BE001F9465 /* example.bmp */,
 				722D2AE61681A3BE001F9465 /* example.gif */,
 				722D2AE71681A3BE001F9465 /* example.jpg */,
@@ -761,6 +769,7 @@
 				722D2AF21681A3BE001F9465 /* powerup10.mp3 in Resources */,
 				722D2AF31681A3BE001F9465 /* tm2r_bom27_a.wav in Resources */,
 				722D2AF91681DEC3001F9465 /* bgm_maoudamashii_cyber07.mp3 in Resources */,
+				72218A2216857EEC00047E05 /* mori640x480.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +780,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72218A271685969200047E05 /* MapChipExample.c in Sources */,
 				722D2B0216821DA2001F9465 /* TouchExample.c in Sources */,
 				722D2AFF16821603001F9465 /* DeviceExample.c in Sources */,
 				722D2AFC1681EC9B001F9465 /* ObjContainerExample.c in Sources */,
@@ -888,6 +898,7 @@
 		7287859F167DA24F001EC5AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLibSample/KLibSample-Prefix.pch";
@@ -900,6 +911,7 @@
 		728785A0167DA24F001EC5AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLibSample/KLibSample-Prefix.pch";

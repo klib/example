@@ -44,6 +44,7 @@
 
 #include "KLDrawQueue.h"
 #include "KLSprite.h"
+#include "KLGL.h"
 #include "KLib.h"
 
 static KLDrawQueue	kl_drawqueue;
@@ -271,6 +272,9 @@ void KLDrawQueue_Clear(){
 void KLDrawQueue_Flush(){
 	
 	KLDrawQueue* p = &kl_drawqueue;
+	KLGLFlags* pFlags = KLGL_GetFlags();
+	
+	pFlags->forceReflesh = 0;
 	
 	if( p->offset==0 )
 	{
@@ -692,10 +696,12 @@ static void KLDrawQueue_AddSprite( KLSprite* pSprite ){
 //================================================================
 bl KLDrawQueue_Check( KLPrimitiveType type, KLSprite* pSprite, float line_w ){
 	
-	KLDrawQueue* p = &kl_drawqueue;
+	KLDrawQueue*	p		= &kl_drawqueue;
+	KLGLFlags*		pFlags	= KLGL_GetFlags();
 	
-	// ブレンドかプリミティブかテクスチャIDが変わったら現在溜まってるキューを反映
-	if(	( p->offset && p->isForceUpdate ) ||
+	// ブレンドかタイプかテクスチャIDが変わったら現在溜まってるキューを反映
+	if( pFlags->forceReflesh ||
+	    ( p->offset && p->isForceUpdate ) ||
 		( pSprite && pSprite->tid != p->tid ) ||
 		( p->type!=type ) ||
 		( p->type == KLPRIM_LINE && line_w != p->wLine ) )

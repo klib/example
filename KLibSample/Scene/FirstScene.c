@@ -15,6 +15,7 @@
 #include "ObjContainerExample.h"
 #include "DeviceExample.h"
 #include "TouchExample.h"
+#include "MapChipExample.h"
 
 //===========================================================
 /**
@@ -93,11 +94,12 @@ static void FirstScene_Update( KLObj* pObj, void* pParam ){
 	Menu menu[] = {
 		{"Primitives",			PrimitiveTest_Init },
 		{"Sprites",				SpriteTest_Init },
+		{"Mapchip(texture atlas)", MapChipTest_Init },
 		{"Font&Labels",			FontAndLabel_Init },
 		{"Sounds",				SoundTest_Init },
 		{"Object Container",	ObjContainer_Init },
 		{"Device info",			DeviceTest_Init },
-		{"Touch&Scroll",		TouchTest_Init },
+		{"Touch",				TouchTest_Init },
 	};
 	
 	app.label.fontsize = 32;

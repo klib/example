@@ -217,6 +217,7 @@ void KLGL_Init( GLuint programid ){
 	pEnabled->point_size_array	= FALSE;
 	pEnabled->uv_array			= FALSE;
 	pEnabled->vertex_array		= FALSE;
+	pEnabled->forceReflesh		= FALSE;
 	
 	// 初期ブレンドの設定
 	glsBlendf(TRUE);
@@ -634,7 +635,7 @@ static bl GL_SetState( u16 state, bl isTrue ){
 	switch ( state )
 	{
 
-		case	GL_BLEND:							{ run = ( pEnabled->blend != isTrue );				if(run)pEnabled->blend=isTrue; }break;
+		case	GL_BLEND:							{ run = ( pEnabled->blend != isTrue );				if(run){pEnabled->blend=isTrue; pEnabled->forceReflesh=TRUE;} }break;
 		case	GL_CULL_FACE:						{ run = ( pEnabled->cull_face != isTrue );			if(run)pEnabled->cull_face=isTrue; }break;
 		case GL_DEPTH_TEST:						{ run = ( pEnabled->depth_test != isTrue );		if(run)pEnabled->depth_test=isTrue; }break;
 		case	GL_DITHER:							{ run = ( pEnabled->dither != isTrue );			if(run)pEnabled->dither=isTrue; }break;
