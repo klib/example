@@ -1,0 +1,22 @@
+precision lowp float;
+
+varying vec4 klrgba, klrgbaRate;
+varying vec2 kltex;
+
+uniform sampler2D tex;
+
+void main(){
+
+	lowp vec4 c = texture2D(tex, kltex);//.rgba
+
+	if(c.a == 0.0)
+    {
+		if ( klrgba.a==0.0 )
+		{
+			discard;
+		}
+    }
+
+	gl_FragColor = klrgba + klrgbaRate * c;
+
+}
